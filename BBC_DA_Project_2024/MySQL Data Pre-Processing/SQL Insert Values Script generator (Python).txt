@@ -1,0 +1,30 @@
+import pandas as pd
+
+
+def generate_sql_from_excel(excel_file, table_name, output_sql_file):
+    # Load the Excel file
+    df = pd.read_excel(excel_file)
+    
+
+    sql_statements = []
+    for index, row in df.iterrows():
+
+        columns = ', '.join([f"{col}" for col in df.columns])
+        values = ', '.join([f"'{str(value).replace('\'', '\'\'')}'" if pd.notna(value) else "NULL" for value in row])
+        
+
+        sql = f"INSERT INTO {table_name} ({columns}) VALUES ({values});"
+        sql_statements.append(sql)
+    
+
+    with open(output_sql_file, 'w', encoding='utf-8') as file:
+        file.write('\n'.join(sql_statements))
+    
+    print(f"SQL script has been saved to {output_sql_file}")
+
+
+excel_file = "C:/Users/vlad loan/Desktop/BBC_Task_2/bbc task/iP_task_user_info copy_excel.xlsx"  # Path to your Excel file
+table_name = "iP_task_user_info"  # Name of your SQL table
+output_sql_file = "iP_task_user_info_insert_statements.sql"  # Output SQL file
+
+generate_sql_from_excel(excel_file, table_name, output_sql_file)
