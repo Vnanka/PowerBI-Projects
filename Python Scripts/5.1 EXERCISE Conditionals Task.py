@@ -3,7 +3,8 @@
 """
 Created on Thu Oct 17 13:04:18 2019
 
-@author: Giles
+@author: Giles - Excercise Author
+@Excercise_Completion: Vladislavs Nanaks
 """
 
 '''
@@ -70,7 +71,7 @@ elif your_value < x:
 elif your_value == x:
     print('Your won, the correct number is 5!!!! Congrads!')
 else:
-    print('You entered some bullshit')
+    print('You entered some straaaange things you have entered')
 
 
 
