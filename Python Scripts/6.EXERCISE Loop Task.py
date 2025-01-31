@@ -45,7 +45,7 @@ if x >= 1 and x <= 12:
     for i in range (0,11):
         print(x,'*',i,'=',x*i)
 else:
-    print('Number out of range suka ')
+    print('Number out of range ')
     try_again = input("Would you like to try again? (yes/no): ").strip().lower()
     if try_again == 'yes':
         print("Let's try again!")
@@ -55,61 +55,6 @@ else:
             print("Invalid input. Please enter 'yes' or 'no'.")
             x = int(input('put a number between 1 and 12:    '))
 
-
-while True:
-    x = int(input('Put a number between 1 and 12: '))
-    
-    if 1 <= x <= 12:
-        for i in range(0, 11):
-            print(x, '*', i, '=', x * i)
-        break  
-    else:
-        print('Number out of range.')
-        try_again = input("Would you like to try again? (yes/no): ").strip().lower()
-
-        if try_again == 'yes':
-            print("Let's try again!")
-            continue  
-        elif try_again == 'no':
-            print("Goodbye!")
-            break  
-        else:
-            print("Invalid input. Please enter 'yes' or 'no'.")
-
-
-
-while True:
-    try:
-        x = int(input('Put a number between 1 and 12: '))
-        
-        if 1 <= x <= 12:
-            # Print multiplication table if input is within the valid range
-            for i in range(0, 11):
-                print(x, '*', i, '=', x * i)
-            break  # Exit the loop after printing the multiplication table
-        else:
-            print('Number out of range.')
-            
-            while True:  # Inner loop for asking if the user wants to try again
-                try_again = input("Would you like to try again? (yes/no): ").strip().lower()
-                
-                if try_again == 'yes':
-                    print("Let's try again!")
-                    break  # Break inner loop and restart the outer loop
-                elif try_again == 'no':
-                    print("Goodbye!")
-                    exit()  # Exit the program completely
-                else:
-                    print("Invalid input. Please enter 'yes' or 'no'.")
-    except ValueError:
-        print("Invalid input. Please enter a valid number between 1 and 12.")
-
-x = input('Number between 1 and 12      ')
-while (not x.isdigit()) or int(x) > 12 or int(x) < 1:
-    x = input('again :     ')
-x = int(x)
-for i in range(1,11):
-    print(f'{x} *  {i} = ', x*i)
 
 '''
 Question 4
