@@ -104,14 +104,14 @@ f.close()
 
 import os
 
-# Get the current working directory
+# current working directory
 current_directory = os.getcwd()
 print("Current working directory:", current_directory)
 
-# Specify the path you want to change to
+# path to change to
 new_directory = C:\Users\vlad loan\Desktop\Codes\WD
 
-# Change the current working directory
+# Change working directory
 os.chdir('C:\\Users\\vlad loan\\Desktop\\Codes\\WD')
 
 '''
