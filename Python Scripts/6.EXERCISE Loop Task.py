@@ -3,7 +3,8 @@
 """
 Created on Sun Oct 20 08:50:32 2019
 
-@author: Giles
+@author: Giles - Exercise Author
+@Exercise_Completion - Vladislavs Nanaks
 """
 
 '''
